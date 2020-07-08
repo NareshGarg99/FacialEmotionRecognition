@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+  {% block content %}
+
+  	<p class="text-center" style="font-size: 28px;">Automatically find out the emotion of face image of any person<br>
+  		you can find emotion within the 7 emotions<br>
+  		please upload your image below...
+  	</p>    
+
+
+      <form method="POST" enctype="multipart/form-data" action="{{ url_for('upload') }}" class="text-center">
+        <input type="file" name="photo">
+        <input type="submit" name="">
+    </form>
+      <div class="text-center" style="margin-top:50px;">
+      <h3>{{ sentiment }}</h3>
+  </div>
+
+
+		<p class="text-center" style="font-size: 40px; padding-top: 40px;">Face Sentiment Analyzer Overview
+  	</p>    
+
+
+  	<div class="row">
+  		<div class="col-lg-3">
+  		</div>
+  		<div class="col-lg-6">
+  			<p class="text-center " style="font-size: 28px; opacity: 0.7;">What is it and how does it work?</p>    
+  		</div>
+  		<div class="col-lg-3">
+  		</div>
+  	</div>
+
+
+  	<p class="text-center" style="font-size: 40px; padding-top: 40px;">
+  		<img src="static/images/face.jpg">
+  	</p>    
+
+  	<div class="row">
+  		<div class="col-lg-2">
+  		</div>
+
+  		<div class="col-lg-8">	
+  			<p class="text-center" style="font-size: 20px; padding-top: 20px;">
+  				Facial Sentiment analysis provides a very accurate analysis of the overall emotion of the image. In our tool we trained images Convolutional Neural Networks with 7 different emotions. So it provide very accurate results of emotion of any human image.
+  			</p>    
+  		</div>
+  		<div class="col-lg-2">
+  		</div>
+  	</div>
+
+
+
+
+  	<p class="text-center" style="font-size: 40px; padding-top: 40px;">
+  		Data and accuracy
+
+  	<div class="row">
+  		<div class="col-lg-2">
+  		</div>
+  		<div class="col-lg-8">	
+	  	<p class="text-center" style="font-size: 20px;">
+	  		Our algorithms are trained using our emotion data repository, that has now grown to nearly 6 million faces analyzed in 87 countries. We continuously test our algorithms to provide the most reliable and accurate emotion metrics. Now, also using deep learning approaches, we can very quickly tune our algorithms for high performance and accuracy. Our key emotions achieve accuracy in the high 90th percentile. We sampled our test set, comprised of hundreds of thousands of emotion events, from our data repository. This data has been gathered representing real-world, spontaneous facial expressions and vocal utterances, made under challenging conditions such as changes in lighting and background noise, and variances due to ethnicity, age, and gender. You can find more information on how we measure our accuracy here.
+	  		</p>
+		</div>
+  		<div class="col-lg-2">
+  		</div>
+  	</div>  		
+
+  	<p class="text-center" style="font-size: 40px; padding-top: 40px;">
+  		Use Cases
+  	</p>
+
+
+  	<div class="card-group" style="padding: 40px 150px 40px 150px;">
+  <div class="card">
+    <img src="static/images/use1.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Improve Customer Satisfaction</h5>
+      <p class="card-text">Sentiment analysis quantifies the perception of current and potential customers on careful examination of their feedback. This helps you in streamlining the focus on customer satisfaction and building an appealing branding technique which directly improves your bottomline.
+
+</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="static/images/use.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Reputation Management</h5>
+      <p class="card-text">Sentiment Analysis can monitor all the conversations around your brand in real-time and can help you prioritize those conversations having the most negative sentiment to protect your brand reputation . ParallelDots’ Sentiment Analysis is trained on millions of tweets and comments and therefore, works especially well to analyze user generated content.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
+
+
+{% endblock content %}
